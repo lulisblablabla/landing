@@ -57,16 +57,17 @@ p {
 }
 
 /* Home section styles */
-
 #home {
     display: flex;
     align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .product-info {
     flex: 1;
     padding: 80px 40px;
     background-color: #FDF9B8;
+    text-align: center;
 }
 
 .product-image {
@@ -82,6 +83,7 @@ p {
 #about {
     display: flex;
     align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .about-image {
@@ -121,6 +123,7 @@ p {
     padding: 80px 40px;
     background-color: #4f5c6c;
     color: #FFFFFF;
+    flex-wrap: wrap;
 }
 
 .value-logo {
@@ -150,6 +153,7 @@ p {
 #how-to-use {
     display: flex;
     align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .how-to-use-image {
@@ -210,6 +214,7 @@ p {
     display: flex;
     justify-content: center;
     margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 #contact {
@@ -217,7 +222,6 @@ p {
     background-color: #FDF9B8;
     text-align: center;
 }
-
 
 .instagram-button {
     display: inline-block;
@@ -236,12 +240,50 @@ p {
     font-size: 24px;
 }
 
-
-
-
 footer {
     background-color: #4f5c6c;
     color: #FFFFFF;
     padding: 20px;
     text-align: center;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .product-info,
+    .about-content,
+    .value-content,
+    .how-to-use-content {
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 30pt;
+    }
+
+    p {
+        font-size: 16pt;
+    }
+
+    .product-info,
+    .about-content,
+    .value-content,
+    .how-to-use-content {
+        padding: 20px;
+    }
 }
